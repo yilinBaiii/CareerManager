@@ -27,6 +27,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+[![Product Name Screen Shot][application-screenshot]](https://developing.com)
+
 This is a full-stack job application tool designed to help job seekers organize their job information. It utilizes the power of <strong>*MongoDB, Express, React, and Node.js*</strong> to deliver a seamless experience. With this application, job seekers can easily manage and track their job search progress in one central location.
 
 
@@ -86,4 +88,6 @@ Yi Zhao - [LinkedIn](https://www.linkedin.com/in/joey-zhao-yi/) - joey.zhao@mail
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- MARKDOWN LINKS & IMAGES -->
+[application-screenshot]: images/AppScreenshot.png
 
