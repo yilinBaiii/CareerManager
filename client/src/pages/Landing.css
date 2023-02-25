@@ -1,0 +1,14 @@
+#logo-div {
+    border: 2px solid rgb(61, 111, 174);
+    border-radius: 25px; 
+    width: 225px; 
+    margin: 5px
+};
+.btn{
+    line-height: 1.15;
+}
+.btn-hero{
+    font-size: 1.25rem;
+    padding: 0.5rem 1.25rem;
+
+}

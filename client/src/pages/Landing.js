@@ -1,10 +1,17 @@
 import React from 'react'
-// import logo from "../images/logo"
+// import logo from "../images/logo.ico"
+import walkerLogo from "../images/WalkerLogo.png"
+import CM_Text from "../images/CM_Text.png"
+import "./Landing.css"
 const Landing = () => {
   return (
     <main>
         <nav>
-            <img src='' alt='' className='logo'></img>
+        <div id="logo-div" >
+            <img src= {walkerLogo} alt='walkerLogo' height = "50px"></img>
+            <img src= {CM_Text} alt='CM_Text' height = "50px"></img>
+        </div>
+            
         </nav>
         <div className = "container page">
             <div className='info'>
