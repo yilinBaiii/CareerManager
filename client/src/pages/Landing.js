@@ -1,7 +1,7 @@
 import React from 'react'
 import Space from "../images/Space.png"
 import Wrapper from '../wrappers/LandingPage'
-import {Logo} from "../components/index"
+import { Logo } from "../components/index"
 
 const Landing = () => {
     return (
