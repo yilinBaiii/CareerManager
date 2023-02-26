@@ -55,7 +55,7 @@ The goal of building a full-stack application from scratch is to gain hands-on e
 
 
 ### Tech Stack:
-  * Frontend: React Hooks <br>
+  * Frontend: Styled Components, React Hooks <br>
   * Backend: Node.js, ES6, JWT, MongoDB <br>
   * DevOps: Axios, Heroku <br>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
