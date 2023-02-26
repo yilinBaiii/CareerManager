@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
+import img from '../images/404.png';
+import Wrapper from '../wrappers/ErrorPage';
 
 const Error = () => {
     return (
-        <div>Mimi is Error</div>
+        <Wrapper className="full-page">
+            <div>
+                <img src = {img} alt='not found' />
+            </div>
+            <h3>Ohh! Page Not Found</h3>
+            <p>We can't seem to find the page you're looking for</p>
+            <Link to='/'>Back Home</Link>
+        </Wrapper>
     )
 }
 
