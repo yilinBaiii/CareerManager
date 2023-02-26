@@ -1,18 +1,13 @@
 import React from 'react'
 import Space from "../images/Space.png"
-import walkerLogo from "../images/WalkerLogo.png"
-import CM_Text from "../images/CM_Text.png"
-import "./Landing.css"
-import Wrapper from '../wrappers/LandingPage';
+import Wrapper from '../wrappers/LandingPage'
+import Logo from "../components/Logo"
 
 const Landing = () => {
     return (
         <Wrapper>
             <nav>
-                <div id="logo-div" >
-                    <img src={walkerLogo} alt='walkerLogo' height="50px"></img>
-                    <img src={CM_Text} alt='CM_Text' height="50px"></img>
-                </div>
+                <Logo />
             </nav>
             <div className="container page">
                 {/* info */}
