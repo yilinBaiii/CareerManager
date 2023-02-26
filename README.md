@@ -1,10 +1,8 @@
+<a name="readme-top"></a>
 
 <div>
-
   <h1 align="center">CareerManager</h1>
-
 </div>
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
