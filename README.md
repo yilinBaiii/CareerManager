@@ -68,6 +68,7 @@ The goal of building a full-stack application from scratch is to gain hands-on e
     - [x] Develop the landing page of the application
     - [x] Add Router
     - [x] Add Error Page
+    - [x] Add React Hooks for register form
     - [ ] Register Page
 - [ ] Creating a server application that utilizes ES6 modules as the foundation for handling server-side logic.
 - [ ] Setting up a MongoDB database in the Atlas cloud to store the application's data.

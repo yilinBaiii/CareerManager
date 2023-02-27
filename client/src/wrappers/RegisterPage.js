@@ -10,7 +10,8 @@ const Wrapper = styled.section`
   }
   .form {
     max-width: 400px;
-    border-top: 5px solid var(--primary-500);
+    border-top: 5px solid var(--primary-200);
+    border-bottom: 5px solid var(--primary-200);
   }
   h3 {
     text-align: center;

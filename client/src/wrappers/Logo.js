@@ -5,7 +5,8 @@ const Wrapper = styled.div`
     border: 2px solid rgb(61, 111, 174);
     border-radius: 25px; 
     width: 225px; 
-    margin: 5px
+    margin: auto;
+    margin-bottom: 20px;
   };
   img {
     height: 50px;
