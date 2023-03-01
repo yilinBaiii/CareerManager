@@ -1,4 +1,3 @@
-
 import React  from 'react'; 
 import { BrowserRouter , Routes, Route, Link } from 'react-router-dom';
 import { Register, Landing, Dashboard, Error } from "./pages/index"
