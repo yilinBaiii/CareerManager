@@ -39,7 +39,7 @@ function Register() {
       <form className='form' onSubmit={onSubmit}>
         <Logo />
         <h3>{values.isMember ? 'Login' : 'Register'}</h3>
-        {values.showAlert && <Alert />}
+        {showAlert && <Alert />}
         {/* name field */}
         <div className='form-row'>
             {/* name input */}

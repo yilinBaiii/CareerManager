@@ -13,6 +13,7 @@ export const initialState = {
   alertText: '',
   alertType: '',
 };
+
 const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
