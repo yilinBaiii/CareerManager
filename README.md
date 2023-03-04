@@ -64,13 +64,15 @@ The goal of building a full-stack application from scratch is to gain hands-on e
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Developing a front-end application using React to provide an interface for user interaction.
+- [x] Developing a front-end application using React to provide an interface for user interaction.
     - [x] Develop the landing page of the application
     - [x] Add Router
     - [x] Add Error Page
     - [x] Add React Hooks for register form
-    - [ ] Register Page
+    - [x] Register Page
 - [ ] Creating a server application that utilizes ES6 modules as the foundation for handling server-side logic.
+    - [x] set up basic error handling middleware
+    - [x] create MongoDB and connect to the project
 - [ ] Setting up a MongoDB database in the Atlas cloud to store the application's data.
 - [ ] Testing the web services using POSTMAN to ensure proper functionality.
 - [ ] Adding email validation functionality to ensure user data accuracy.
