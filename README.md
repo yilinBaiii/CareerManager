@@ -73,6 +73,7 @@ The goal of building a full-stack application from scratch is to gain hands-on e
 - [ ] Creating a server application that utilizes ES6 modules as the foundation for handling server-side logic.
     - [x] set up basic error handling middleware
     - [x] create MongoDB and connect to the project
+    - [x] create API router with dummy functions and tested in Postman
 - [ ] Setting up a MongoDB database in the Atlas cloud to store the application's data.
 - [ ] Testing the web services using POSTMAN to ensure proper functionality.
 - [ ] Adding email validation functionality to ensure user data accuracy.
