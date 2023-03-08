@@ -1,19 +1,15 @@
-import express from 'express';
-import dotenv from 'dotenv';
-
-
-dotenv.config();
-
-const app = express();
-
-
+import express from 'express'
+const app = express()
+import dotenv from 'dotenv'
+dotenv.config()
+import 'express-async-errors'
 
 // db and authenticateUser
-import connectDB from './db/connect.js';
+import connectDB from './db/connect.js'
 
 // routes
-import authRoutes from './routes/authRoutes.js';
-import jobRoutes from './routes/jobRoutes.js';
+import authRoutes from './routes/authRoutes.js'
+import jobRoutes from './routes/jobRoutes.js'
 
 //middleware
 import notFoundMiddleware from './middleware/not-found.js'

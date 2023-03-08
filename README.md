@@ -70,13 +70,16 @@ The goal of building a full-stack application from scratch is to gain hands-on e
     - [x] Add Error Page
     - [x] Add React Hooks for register form
     - [x] Register Page
-- [ ] Creating a server application that utilizes ES6 modules as the foundation for handling server-side logic.
+- [x] Creating a server application that utilizes ES6 modules as the foundation for handling server-side logic.
     - [x] set up basic error handling middleware
     - [x] create MongoDB and connect to the project
     - [x] create API router with dummy functions and tested in Postman
-- [ ] Setting up a MongoDB database in the Atlas cloud to store the application's data.
-- [ ] Testing the web services using POSTMAN to ensure proper functionality.
-- [ ] Adding email validation functionality to ensure user data accuracy.
+  - [x] Setting up a MongoDB database in the Atlas cloud to store the application's data.
+  - [x] Testing the web services using POSTMAN to ensure proper functionality.
+- [x] Error handling
+  - [x] adding email validation functionality to ensure user data accuracy.
+  - [x] setup register controller
+  - [ ] refactor error
 - [ ] Implementing JWT for authentication and authorization to enhance application security.
    - [ ] Extending the existing users’ info system using Google sign-in with Firebase Authentication
 - [ ] Enabling search/filter functionality on both the server and front-end for efficient user navigation.
