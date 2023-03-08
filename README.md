@@ -88,7 +88,8 @@ The goal of building a full-stack application from scratch is to gain hands-on e
 ## Contact
 
 Yilin Bai - [LinkedIn](https://www.linkedin.com/in/yilin-bai/) - yilinbaiii@gmail.com <br>
-Yi Zhao - [LinkedIn](https://www.linkedin.com/in/joey-zhao-yi/) - joey.zhao@mail.utoronto.ca
+Yi Zhao - [LinkedIn](https://www.linkedin.com/in/joey-zhao-yi/) - joey.zhao@mail.utoronto.ca <br>
+Biliang Wang - [LinkedIn](https://www.linkedin.com/in/joe-wang-480959174/) - lvoldemort1127@hotmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
