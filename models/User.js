@@ -1,3 +1,4 @@
+import bcrypt from 'bcryptjs';
 import mongoose from 'mongoose'
 import validator from 'validator'
 
@@ -39,5 +40,16 @@ const UserSchema = new mongoose.Schema({
         default: "my city",
     },
 })
+
+UserSchema.pre('save', async function (next) {
+    console.log(this.password);
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+})
+
+UserSchema.methods.createJWT() = async function () {
+    
+}
+
 
 export default mongoose.model('User', UserSchema)
