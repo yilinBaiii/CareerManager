@@ -19,8 +19,17 @@ const register = async (req, res) => {
     if (userAlreadyExist)
         throw new APIError('This email has been registered', StatusCodes.BAD_REQUEST)
     const user = await User.create({ name, email, password })
-    user.createJWT()
-    res.status(StatusCodes.CREATED).json({user})
+    const token = await user.createJWT()
+    res.status(StatusCodes.CREATED).json({
+        user:{
+            name: user.name, 
+            lastName: user.lastName, 
+            location: user.location, 
+            email:user.email,
+        }, 
+        location: user.location,
+        token,
+    })
 }
 
 const login = async(req, res) => {
