@@ -20,7 +20,6 @@
     "server": "nodemon  --inspect server.js --ignore client",
     "client": "cd ./client && npm start",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
-
   },
   "repository": {
     "type": "git",
