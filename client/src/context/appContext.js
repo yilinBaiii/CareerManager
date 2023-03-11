@@ -8,10 +8,9 @@ import {
 
 
 export const initialState = {
-  isLoading: false,
-  showAlert: false,
-  alertText: '',
-  alertType: '',
+  user: null,
+  token: null,
+  userLocation: '',
 };
 
 const AppContext = React.createContext();
