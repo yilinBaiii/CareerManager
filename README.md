@@ -80,8 +80,10 @@ The goal of building a full-stack application from scratch is to gain hands-on e
   - [x] adding email validation functionality to ensure user data accuracy.
   - [x] setup register controller
   - [x] improve error message and refactor error
-- [ ] Implementing JWT for authentication and authorization to enhance application security.
-   - [ ] Extending the existing users’ info system using Google sign-in with Firebase Authentication
+- [x] Implementing JWT for authentication and authorization to enhance application security.
+  - [x] Hash the user password before store it into the database
+  - [x] send JWT after user register and exclude password
+- [ ] Extending the existing users’ info system using Google sign-in with Firebase Authentication
 - [ ] Enabling search/filter functionality on both the server and front-end for efficient user navigation.
 - [ ] Finally, deploying this MERN application to Heroku to make it accessible globally.
 

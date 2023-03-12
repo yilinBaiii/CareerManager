@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Logo, FormRow, Alert } from '../components/index';
 import Wrapper from '../wrappers/RegisterPage';
 import { useAppContext } from '../context/appContext';
+import { useNavigate } from 'react-router-dom';
 
 const initialState = {
   name: '',
@@ -14,8 +15,9 @@ const initialState = {
 // if possible prefer local state
 // global state
 function Register() {
+  const navigate = useNavigate();
   const [values, setValues] = useState(initialState);
-  const { isLoading, showAlert, displayAlert } = useAppContext();
+  const { user, isLoading, showAlert, displayAlert, registerUser } = useAppContext();
   // global context and useNavigate later
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -32,7 +34,20 @@ function Register() {
       displayAlert();
       return;
     }
+    const currentUser = { name, email, password };
+    if (isMember) {
+      console.log("already a member");
+    } else {
+      registerUser(currentUser);
+    }
   };
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate('/');
+      }, 1000);
+    }
+  }, [user, navigate]);
   
   return (
     <Wrapper className='full-page'>
@@ -71,7 +86,7 @@ function Register() {
         </button>
         <p>
             {values.isMember ? 'Not a member yet?' : 'Already a member?'}
-            <button type='button' onClick={toggleMember} className='member-btn'>
+            <button type='button' onClick={toggleMember} className='member-btn' disabled = {isLoading}>
                 {values.isMember ? 'Register' : 'Login'}
             </button>
         </p>

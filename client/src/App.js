@@ -9,6 +9,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/register" element={<Register />} />
         <Route path="/landing" element={<Landing />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
