@@ -1,8 +1,24 @@
 import User from '../models/User.js'
-import { StatusCodes } from 'http-status-codes'
+import { StatusCodes, getReasonPhrase } from 'http-status-codes'
+
+class APIError extends Error {
+    constructor(message, statusCode = StatusCodes.BAD_REQUEST) {
+        super(message);
+        this.statusCode = statusCode;
+    }
+}
+APIError.prototype.toString = function () {
+    return `Error Reason: ${getReasonPhrase(this.statusCode)}` + '\n' + this.stack;
+};
 
 const register = async (req, res) => {
-    const user = await User.create(req.body)
+    const { name, email, password } = req.body
+    if (!name || !email || !password)
+        throw new APIError('Please provide all values', StatusCodes.BAD_REQUEST)
+    const userAlreadyExist = await User.findOne({ email })
+    if (userAlreadyExist)
+        throw new APIError('This email has been registered', StatusCodes.BAD_REQUEST)
+    const user = await User.create({ name, email, password })
     res.status(StatusCodes.CREATED).json({user})
 }
 

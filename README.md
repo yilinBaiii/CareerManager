@@ -79,7 +79,7 @@ The goal of building a full-stack application from scratch is to gain hands-on e
 - [x] Error handling
   - [x] adding email validation functionality to ensure user data accuracy.
   - [x] setup register controller
-  - [ ] refactor error
+  - [x] improve error message and refactor error
 - [ ] Implementing JWT for authentication and authorization to enhance application security.
    - [ ] Extending the existing users’ info system using Google sign-in with Firebase Authentication
 - [ ] Enabling search/filter functionality on both the server and front-end for efficient user navigation.
