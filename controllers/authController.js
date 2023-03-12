@@ -7,6 +7,7 @@ class APIError extends Error {
         this.statusCode = statusCode;
     }
 }
+
 APIError.prototype.toString = function () {
     return `Error Reason: ${getReasonPhrase(this.statusCode)}` + '\n' + this.stack;
 };
@@ -19,6 +20,7 @@ const register = async (req, res) => {
     if (userAlreadyExist)
         throw new APIError('This email has been registered', StatusCodes.BAD_REQUEST)
     const user = await User.create({ name, email, password })
+
     const token = await user.createJWT()
     res.status(StatusCodes.CREATED).json({
         user:{
@@ -33,7 +35,23 @@ const register = async (req, res) => {
 }
 
 const login = async(req, res) => {
-    res.send('login user')
+    const {email, password} = req.body 
+    if (!email || !password) {
+        throw new APIError('Please provide all values', StatusCodes.BAD_REQUEST)
+    }
+    const user = await User.findOne({email}).select('+password')
+    if (!user) {
+        throw new APIError('Invalid Credential', StatusCodes.UNAUTHORIZED)
+    }
+    const isPasswordCorrect = await user.comparePassword(password)
+    if (!isPasswordCorrect){
+        throw new APIError('Invalid Credential', StatusCodes.UNAUTHORIZED)
+    }
+    const token = user.createJWT()
+    user.password = undefined
+    res.status(StatusCodes.CREATED).json({
+        user, token, location: user.location
+    })
 }
 
 const updateUser = async(req, res) => {

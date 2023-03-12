@@ -17,7 +17,7 @@ const initialState = {
 function Register() {
   const navigate = useNavigate();
   const [values, setValues] = useState(initialState);
-  const { user, isLoading, showAlert, displayAlert, registerUser } = useAppContext();
+  const { user, isLoading, showAlert, displayAlert, setupUser} = useAppContext();
   // global context and useNavigate later
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -34,13 +34,26 @@ function Register() {
       displayAlert();
       return;
     }
+
     const currentUser = { name, email, password };
     if (isMember) {
-      console.log("already a member");
+      setupUser({
+        currentUser, 
+        endpoint: 'login', 
+        alertText: 'Login Successful! Redirecting'
+      })
+
     } else {
-      registerUser(currentUser);
+      setupUser({
+        currentUser, 
+        endpoint: 'register', 
+        alertText: 'User Created! Redirecting'
+      })
+
     }
+    
   };
+
   useEffect(() => {
     if (user) {
       setTimeout(() => {
