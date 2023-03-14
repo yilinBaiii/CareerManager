@@ -87,7 +87,7 @@ The goal of building a full-stack application from scratch is to gain hands-on e
   - [x] implement front-end and back-end for user login
 - [x] Create Navbar and Sidebar
   - [x] develop protected route for nested pages using Outlet  
-  - [ ] develop shared layout and Navbar
+  - [x] develop shared layout and Navbar
   - [ ] develop small Sidebar and big Sidebar
 - [ ] Extending the existing users’ info system using Google sign-in with Firebase Authentication
 - [ ] Enabling search/filter functionality on both the server and front-end for efficient user navigation.
