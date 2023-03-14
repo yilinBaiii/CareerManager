@@ -4,9 +4,10 @@ const Wrapper = styled.div`
   div {
     border: 2px solid rgb(61, 111, 174);
     border-radius: 25px; 
-    width: 225px; 
+    /* width: 225px;  */
     margin: auto;
-    margin-bottom: 20px;
+    text-align: center;
+    /* margin-bottom: 20px; */
   };
   img {
     height: 50px;

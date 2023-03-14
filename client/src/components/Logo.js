@@ -6,7 +6,7 @@ import Wrapper from '../wrappers/Logo'
 const Logo = () => {
     return (
         <Wrapper>
-            <div>
+            <div className='logo'>
                 <img src={walkerLogo} alt='walkerLogo'></img>
                 <img src={CM_Text} alt='CM_Text'></img>
             </div>
