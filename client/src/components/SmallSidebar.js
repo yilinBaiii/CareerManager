@@ -1,9 +1,8 @@
 import Wrapper from '../wrappers/SmallSidebar'
 import { FaTimes } from 'react-icons/fa'
 import { useAppContext } from '../context/appContext'
-import links from '../utils/links'
 import Logo from './Logo'
-import { NavLink } from 'react-router-dom'
+import NavLinks from './NavLinks'
 
 const SmallSidebar = () => {
   const { showSidebar, toggleSidebar } = useAppContext()
@@ -21,20 +20,7 @@ const SmallSidebar = () => {
           <header>
             <Logo />
           </header>
-          <div className='nav-links'>
-            {
-              links.map((link) => {
-                const { id, path, text, icon } = link
-                return (
-                  <NavLink to={path} key={id} onClick={toggleSidebar} className={(isActive) => isActive ? 'nav-link active' : 'nav-link'}>
-                    <span className='icon'>{icon}</span>
-                    {text}
-                  </NavLink>
-                )
-              })
-            }
-           
-          </div>
+          < NavLinks toggleSidebar={toggleSidebar} />
         </div>
       </div>
     </Wrapper>

@@ -1,9 +1,27 @@
-import Wrapper from '../wrappers/BigSidebar'
+import Wrapper from "../wrappers/BigSidebar";
+import { useAppContext } from "../context/appContext";
+import Logo from "./Logo";
+import NavLinks from "./NavLinks";
 
-const BigSidebar = () => {
-    return <Wrapper>
-        <h4>Big Sidebar</h4>
+const SmallSidebar = () => {
+  const { showSidebar } = useAppContext();
+  return (
+    <Wrapper>
+      <div
+        className={
+          // show sidebar at the begining
+          showSidebar ? "sidebar-container" : "sidebar-container show-sidebar"
+        }
+      >
+        <div className="content">
+          <header>
+            <Logo />
+          </header>
+          <NavLinks />
+        </div>
+      </div>
     </Wrapper>
-}
+  );
+};
 
-export default BigSidebar
+export default SmallSidebar;
