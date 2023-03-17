@@ -47,7 +47,7 @@ const login = async(req, res) => {
     if (!isPasswordCorrect){
         throw new APIError('Invalid Credential', StatusCodes.UNAUTHORIZED)
     }
-    const token = user.createJWT()
+    const token = await user.createJWT()
     user.password = undefined
     res.status(StatusCodes.CREATED).json({
         user, token, location: user.location
@@ -55,10 +55,10 @@ const login = async(req, res) => {
 }
 
 const updateUser = async(req, res) => {
-    console.log('updateUser')
+    console.log('updateUser', req.user.userId)
     res.send('updateUser user')
 }
 
 
 
-export { register, login, updateUser }
+export { register, login, updateUser, APIError}

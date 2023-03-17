@@ -88,7 +88,8 @@ The goal of building a full-stack application from scratch is to gain hands-on e
 - [x] Create Navbar and Sidebar
   - [x] develop protected route for nested pages using Outlet  
   - [x] develop shared layout and Navbar
-  - [ ] develop small Sidebar and big Sidebar
+  - [x] develop small Sidebar and big Sidebar
+  - [x] add JWT verification middleware 
 - [ ] Extending the existing users’ info system using Google sign-in with Firebase Authentication
 - [ ] Enabling search/filter functionality on both the server and front-end for efficient user navigation.
 - [ ] Finally, deploying this MERN application to Heroku to make it accessible globally.
